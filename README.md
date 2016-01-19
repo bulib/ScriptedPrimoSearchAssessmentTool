@@ -25,6 +25,11 @@ CompResults: has functions that do the comparison and analysis (only one so far)
 ##Documentation
 SPST is still being developed and documentation is rather sparse. The SPST_Demo.ipynb python notebook provides examples that will hopefully assist in getting started. 
 
+##Installation
+
+pip install git+https://github.com/jwacooks/ScriptedPrimoSearchAssessmentTool.git
+
+
 jammerman
 2016-01-19
 
