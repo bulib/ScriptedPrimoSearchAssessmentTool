@@ -86,6 +86,7 @@ class SPST:
         import pymarc
         import marcx
         import pandas as pd
+        import io
         if len(args) > 0:
             t_a = args[0]
         else:
