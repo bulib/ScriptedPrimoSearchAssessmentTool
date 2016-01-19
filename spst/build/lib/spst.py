@@ -25,6 +25,7 @@ class SPST:
     onCampus = 'true'
     institution = 'BOSU'
     search_strings = []
+    __version__ = '1.0.3'
 
     def __init__(self):
         ## Instance Variables
@@ -86,6 +87,7 @@ class SPST:
         import pymarc
         import marcx
         import pandas as pd
+        import io
         if len(args) > 0:
             t_a = args[0]
         else:
@@ -324,9 +326,9 @@ class SPST:
             return_dict[f] = sorted_by_second
         return return_dict
         
-    def data(self,*args, **kwargs):
+    def get_data(self,*args, **kwargs):
         '''
-        Function: data
+        Function: get_data
         
         Purpose: the data function executes a Primo search for each search string in the "search_strings" list and 
                     returns a pandas dataframe containing the parsed results
@@ -336,7 +338,7 @@ class SPST:
                     start
                     end
                     
-        Example:  data(start=5,end=10)
+        Example:  get_data(start=5,end=10)
         '''
         import pandas as pd
         import time
