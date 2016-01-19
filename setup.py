@@ -59,8 +59,7 @@ Topic :: Discovery Services ::Assessment
 import spst
 
 setup(
-    name = 'ScriptedPrimoSearchAssessmentTool',
-    packages = ['ScriptedPrimoSearchAssessmentTool'],
+    name = 'spst',
     version = '1.0.0',
     author='Jack Ammerman',
     author_email='jwacooks@gmail.com',
