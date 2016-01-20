@@ -26,12 +26,13 @@ class SPST:
     institution = 'BOSU'
     search_strings = []
     __version__ = '1.0.3'
+    ## Instance Variables
+    platform = 'production'
+    url_base = 'http://bu-primo.hosted.exlibrisgroup.com:1701/PrimoWebServices/xservice/search/brief'
+    scope = '&loc=local,scope:(BOSU)&loc=adaptor,primo_central_multiple_fe'
 
     def __init__(self):
-        ## Instance Variables
-        platform = 'production'
-        url_base = 'http://bu-primo.hosted.exlibrisgroup.com:1701/PrimoWebServices/xservice/search/brief'
-        scope = '&loc=local,scope:(BOSU)&loc=adaptor,primo_central_multiple_fe'
+        pass
         return 
     
     def set_platform_scope(self,d):
