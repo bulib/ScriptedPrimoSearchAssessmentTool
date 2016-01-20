@@ -2,7 +2,13 @@
 ### version 1.0.4
 
 ##Purpose:
-SPST is a tool to automate searching Ex Libris Primo using a set of search strings for the purpose of comparison and analysis. Originally conceived as a tool to automate efforts to compare the impact of activating various collections in Primo Central Index, the number of use cases has begun to grow. The core functionality of SPST is to iterate through a list of search strings, sending a Deep Link Query to Primo, returning the results in a Pandas dataframe.
+SPST is a tool to automate searching Ex Libris Primo using a set of search strings for the purpose of comparison and analysis. The core functionality of SPST is to iterate through a list of search strings, sending a Deep Link Query to Primo, returning the results in a Pandas dataframe.
+
+Originally conceived as a tool to automate efforts to compare the impact of activating various collections in Primo Central Index, the number of use cases has begun to grow. The tool is currently being developed to enable the Libraries in:
+
+* Assessing the impact of activating particular Primo Central Index collections on the user search experience
+* Identifying problems with deduping and FRBRizing
+* Assessing issues in known item searching
 
 
 ##Classes
