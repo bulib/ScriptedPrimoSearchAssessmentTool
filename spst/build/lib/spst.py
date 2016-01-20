@@ -25,7 +25,7 @@ class SPST:
     onCampus = 'true'
     institution = 'BOSU'
     search_strings = []
-    __version__ = '1.0.3'
+    __version__ = '1.0.4'
     ## Instance Variables
     platform = 'production'
     url_base = 'http://bu-primo.hosted.exlibrisgroup.com:1701/PrimoWebServices/xservice/search/brief'
@@ -355,13 +355,14 @@ class SPST:
         fac_columns = ['Platform','Search_No','Search','TotalHits','SearchEngine','facet','values']
         df_f = pd.DataFrame(columns = fac_columns)
         counter = 0
-        begin = kwargs.get('start', 0)
-        end = kwargs.get('end', len(SPST.search_strings))
-        if type(begin) == str:
-            begin = int(begin)
-        if type(end) == str:
-            end = int(end)
-        for search_string in SPST.search_strings[begin:end]:
+        if len(args) == 2:
+            if (type(args[0]) == int) and (type(args[1]) == int):
+                begin = args[0]
+                end = args[1]
+        else:
+            begin = kwargs.get('start', 0)
+            end = kwargs.get('end', len(SPST.search_strings))
+        for search_string in SPST.search_strings[int(begin):int(end)]:
             time.sleep(0.5)
             if counter%100 == 0:
                 print('Processed: ',str(counter),' searches on ',self.platform)
