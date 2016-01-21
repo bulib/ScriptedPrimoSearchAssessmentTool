@@ -22,7 +22,7 @@ SPST: has several functions that do that searching
 * 	build_url
 * 	parse_response
 * 	parse_facets (haven’t done much with this yet)
-* 	data (performs the searches)
+* 	get_data (performs the searches)
 
 CompResults: has functions that do the comparison and analysis (only one so far)
 
