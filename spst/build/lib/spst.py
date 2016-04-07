@@ -1,4 +1,3 @@
-
 ## spst.py
 import json
 
@@ -25,7 +24,7 @@ class SPST:
     onCampus = 'true'
     institution = 'BOSU'
     search_strings = []
-    __version__ = '1.0.4'
+    __version__ = '1.0.7'
     ## Instance Variables
     platform = 'production'
     url_base = 'http://bu-primo.hosted.exlibrisgroup.com:1701/PrimoWebServices/xservice/search/brief'
@@ -202,6 +201,7 @@ class SPST:
         elements.append('delivery.delcategory')
         elements.append('delivery.fulltext')
         elements.append('search.searchscope')
+        elements.append('search.creationdate')
         elements.append('search.general')
         elements.append('facets.collection')
         elements.append('facets.frbrtype')
@@ -209,6 +209,8 @@ class SPST:
         elements.append('facets.prefilter')
         elements.append('sort')
         #elements.append('addata.doi')
+        elements.append('addata.mis1')
+        elements.append('dedup.c5')
         # parse the response to return the data desired elements
         response = json.loads(response.decode('utf8'))
         # need to extract the desired elements and add them to a dict
@@ -450,7 +452,5 @@ class CompResults:
         results_df = results_df.set_index(index)
             
         return(results_df)
-        
-        
         
 
