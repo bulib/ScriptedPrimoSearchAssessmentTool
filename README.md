@@ -1,5 +1,5 @@
 # ScriptedPrimoSearchAssessmentTool
-### version 1.0.4
+### version 1.0.7
 
 ##Purpose:
 SPST is a tool to automate searching Ex Libris Primo using a set of search strings for the purpose of comparison and analysis. The core functionality of SPST is to iterate through a list of search strings, sending a Deep Link Query to Primo, returning the results in a Pandas dataframe.
