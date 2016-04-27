@@ -365,7 +365,7 @@ class SPST:
             begin = kwargs.get('start', 0)
             end = kwargs.get('end', len(SPST.search_strings))
         for search_string in SPST.search_strings[int(begin):int(end)]:
-            time.sleep(0.5)
+            time.sleep(6)
             if counter%100 == 0:
                 print('Processed: ',str(counter),' searches on ',self.platform)
             search_url = self.build_url(search_string)
